@@ -4,6 +4,4 @@ class Api::V1::CoursesController < ApplicationController
     @courses = Course.all
     render json: @courses
   end
-
-  # POST /
 end

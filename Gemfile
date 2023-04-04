@@ -46,6 +46,9 @@ group :development do
   # gem "spring"
 end
 
+gem 'devise'
+gem 'devise-jwt'
+gem 'rack-cors'
 gem 'rubocop', '>= 1.0', '< 2.0'
 
 group :development, :test do
