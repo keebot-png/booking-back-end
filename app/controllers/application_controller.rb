@@ -1,11 +1,11 @@
 class ApplicationController < ActionController::API
-  before_action :update_allowed_parameters, if: :devise_controller?
+  before_action :configure_permitted_parameters, if: :devise_controller?
+  respond_to :json
 
   protected
 
-  def update_allowed_parameters
-    devise_parameter_sanitizer.permit(:sign_up) do |u|
-      u.permit(:name)
-    end
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: %i[name email password])
+    devise_parameter_sanitizer.permit(:sign_in, keys: %i[email password])
   end
 end
