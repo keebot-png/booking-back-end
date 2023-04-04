@@ -8,7 +8,7 @@ class Api::V1::CoursesController < ApplicationController
   # GET /course/id
   def show
     @course = Course.find(params[:id])
-    render @course
+    render json: @course
   end
 
   # POST /
@@ -17,12 +17,20 @@ class Api::V1::CoursesController < ApplicationController
     if @course.save
       render json: @course
     else
-      render error: { error: 'Operatin unsuccessful'}, status: 400
+      render error: { error: 'Operatin unsuccessful' }, status: 400
     end
   end
 
+  # DELETE
   def destroy
-    
+    @course = Course.find(params[:id])
+    if @course.destroy
+      render json: { message: 'Course deleted successfully.' }, status: 200
+    else
+      render json: { error: 'Course could not be deleted.' }, status: 400
+    end
+  end
+
   private
 
   def course_params
