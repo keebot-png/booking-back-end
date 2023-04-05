@@ -6,7 +6,6 @@ class CreateCourses < ActiveRecord::Migration[7.0]
       t.text :course_outline, array: true
       t.integer :enrolled_students
       t.string :image
-      t.boolean :available, default: true
       t.timestamps
       t.references :user, foreign_key: true
     end
