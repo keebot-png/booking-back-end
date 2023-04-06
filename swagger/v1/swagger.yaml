@@ -26,7 +26,7 @@ paths:
                 title:
                   type: string
                 description:
-                  type: text
+                  type: string
                 course_outline:
                   type: string
                 image:
@@ -57,7 +57,7 @@ paths:
                   title:
                     type: string
                   description:
-                    type: text
+                    type: string
                   course_outline:
                     type: string
                   image:
@@ -71,6 +71,55 @@ paths:
                 - course_outline
                 - image
                 - available
+  "/api/v1/courses/{id}":
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: integer
+    get:
+      summary: Retrieves a course
+      tags:
+      - Course
+      responses:
+        '200':
+          description: course found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  title:
+                    type: string
+                  description:
+                    type: string
+                  course_outline:
+                    type: string
+                  image:
+                    type: string
+                  available:
+                    type: boolean
+                required:
+                - id
+                - title
+                - description
+                - course_outline
+                - image
+                - available
+        '404':
+          description: course not found
+    delete:
+      summary: Delete a course
+      tags:
+      - Course
+      responses:
+        '200':
+          description: course deleted successfully
+        '404':
+          description: course not found
 servers:
 - url: https://{defaultHost}
   variables:
