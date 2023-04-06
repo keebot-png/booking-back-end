@@ -1,0 +1,78 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/api/v1/courses":
+    post:
+      summary: Creates a course
+      tags:
+      - Courses
+      parameters: []
+      responses:
+        '201':
+          description: course created successfully
+        '422':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: integer
+                title:
+                  type: string
+                description:
+                  type: text
+                course_outline:
+                  type: string
+                image:
+                  type: string
+                available:
+                  type: boolean
+              require:
+              - id
+              - title
+              - description
+              - course_outline
+              - image
+              - available
+    get:
+      summary: Retrieves all courses
+      tags:
+      - Courses
+      responses:
+        '200':
+          description: courses found
+          content:
+            application/json:
+              schema:
+                type: array
+                properties:
+                  id:
+                    type: integer
+                  title:
+                    type: string
+                  description:
+                    type: text
+                  course_outline:
+                    type: string
+                  image:
+                    type: string
+                  available:
+                    type: boolean
+                required:
+                - id
+                - title
+                - description
+                - course_outline
+                - image
+                - available
+servers:
+- url: https://{defaultHost}
+  variables:
+    defaultHost:
+      default: http://localhost:3000/

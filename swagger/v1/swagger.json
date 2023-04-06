@@ -1,0 +1,71 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "API V1",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/v1/courses": {
+      "post": {
+        "summary": "Creates a course",
+        "tags": [
+          "Courses"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "course",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "text"
+                },
+                "course_outline": {
+                  "type": "string"
+                },
+                "image": {
+                  "type": "string"
+                },
+                "available": {
+                  "type": "boolean"
+                }
+              },
+              "require": [
+                "title",
+                "description",
+                "course_outline",
+                "image",
+                "available"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "course created successfully"
+          },
+          "422": {
+            "description": "invalid request"
+          }
+        }
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "https://{defaultHost}",
+      "variables": {
+        "defaultHost": {
+          "default": "http://127.0.0.1:3000/"
+        }
+      }
+    }
+  ]
+}
