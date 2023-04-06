@@ -6,8 +6,8 @@ class CreateTeachers < ActiveRecord::Migration[7.0]
       t.integer :years_of_experience
       t.text :professional_summary
       t.float :hourly_rating
-      t.date :available_days, array: true
-      t.time :available_times, array: true
+      t.time :start_time
+      t.time :end_time
       t.timestamps
       t.references :course, foreign_key: true
     end
