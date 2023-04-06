@@ -3,7 +3,7 @@ class Api::V1::TeachersController < ApplicationController
   def index
     @teachers = Teacher.joins(:course).where(courses: { id: params[:course_id] })
 
-    render json: @reservations
+    render json: @teachers
   end
 
   def show
