@@ -121,7 +121,7 @@ paths:
         '404':
           description: course not found
 servers:
-- url: https://{defaultHost}
+- url: http://localhost:3000
   variables:
     defaultHost:
-      default: http://localhost:3000/
+      default: http://localhost:3000
