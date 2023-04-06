@@ -3,6 +3,7 @@ class ApplicationController < ActionController::API
   respond_to :json
 
   private
+
   def set_cors_headers
     response.headers['Access-Control-Allow-Origin'] = '*'
     response.headers['Access-Control-Allo-Methods'] = 'POST, GET, DELETE'
