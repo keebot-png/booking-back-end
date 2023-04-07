@@ -3,35 +3,6 @@ require 'swagger_helper'
 describe 'Courses API' do
   # rubocop:disable Metrics/BlockLength
   path '/api/v1/courses' do
-    post 'Creates a course' do
-      tags 'Courses'
-      consumes 'application/json'
-      parameter name: :course, in: :body, schema: {
-        type: :object,
-        properties: {
-          id: { type: :integer },
-          title: { type: :string },
-          description: { type: :string },
-          course_outline: { type: :string },
-          image: { type: :string },
-          available: { type: :boolean }
-        },
-        require: %w[id title description course_outline image available]
-      }
-      response '201', 'course created successfully' do
-        let(:course) do
-          { title: 'Hello', description: 'This is my first', image: 'http/img.png', course_outline: 'this course',
-            available: true }
-        end
-        run_test!
-      end
-
-      response '422', 'invalid request' do
-        let(:course) { { title: '', description: '' } }
-        run_test!
-      end
-    end
-
     get 'Retrieves all courses' do
       tags 'Courses'
       produces 'application/json'
@@ -43,9 +14,10 @@ describe 'Courses API' do
                  description: { type: :string },
                  course_outline: { type: :string },
                  image: { type: :string },
-                 available: { type: :boolean }
+                 user_id: { type: :integer },
+                 enrolled_students: { type: :integer }
                },
-               required: %w[id title description course_outline image available]
+               required: %w[id title description course_outline image user_id enrolled_students]
         run_test!
       end
     end
@@ -64,24 +36,20 @@ describe 'Courses API' do
                  description: { type: :string },
                  course_outline: { type: :string },
                  image: { type: :string },
-                 available: { type: :boolean }
+                 user_id: { type: :integer },
+                 enrolled_students: { type: :integer }
                },
-               required: %w[id title description course_outline image available]
-        let(:id) { Course.create(title: 'maths', description: 'amazing', course_outline: 'calculus, algebra', image: 'http://school.com/math.jpg', available: true).id }
-        run_test!
-      end
-
-      response '404', 'course not found' do
-        let(:id) { 'invalid' }
-        run_test!
-      end
-    end
-
-    delete 'Delete a course' do
-      tags 'Course'
-      produces 'application/json'
-      response '200', 'course deleted successfully' do
-        let(:id) { Course.create(title: 'maths', description: 'amazing', course_outline: 'calculus, algebra', image: 'http://school.com/math.jpg', available: true).id }
+               required: %w[id title description course_outline image user_id enrolled_students]
+        let(:id) do
+          Course.create(
+            title: 'maths',
+            description: 'amazing',
+            course_outline: 'calculus, algebra',
+            image: 'http://school.com/math.jpg',
+            user_id: 1,
+            enrolled_students: 4
+          ).id
+        end
         run_test!
       end
 
