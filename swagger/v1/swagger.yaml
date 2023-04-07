@@ -120,6 +120,108 @@ paths:
           description: course deleted successfully
         '404':
           description: course not found
+  "/api/v1/courses/{id}/teachers":
+    get:
+      summary: Get all teachers
+      tags:
+      - Teachers
+      responses:
+        '200':
+          description: courses found
+  "/api/v1/courses/{id}/teachers/":
+    post:
+      summary: Creates a teacher
+      tags:
+      - Teacher
+      parameters: []
+      responses:
+        '201':
+          description: Teacher created successfully
+        '422':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: integer
+                name:
+                  type: string
+                image:
+                  type: string
+                years_of_experience:
+                  type: integer
+                professional_summary:
+                  type: string
+                hourly_rating:
+                  type: float
+                start_time:
+                  type: time
+                end_time:
+                  type: time
+                course_id:
+                  type: integer
+              required:
+              - id
+              - name
+              - image
+              - years_of_experience
+              - professional_summary
+              - hourly_rating
+              - start_time
+              - end_time
+              - course_id
+  "/api/v1/courses/{id}/teachers/{id}":
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: integer
+    get:
+      summary: Retrieves a teacher
+      tags:
+      - Teacher
+      responses:
+        '200':
+          description: teacher found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  name:
+                    type: string
+                  image:
+                    type: string
+                  years_of_experience:
+                    type: integer
+                  professional_summary:
+                    type: string
+                  hourly_rating:
+                    type: float
+                  start_time:
+                    type: time
+                  end_time:
+                    type: time
+                  course_id:
+                    type: integer
+                required:
+                - id
+                - name
+                - image
+                - years_of_experience
+                - professional_summary
+                - hourly_rating
+                - start_time
+                - end_time
+                - course_id
+        '404':
+          description: teacher not found
 servers:
 - url: https://{defaultHost}
   variables:
