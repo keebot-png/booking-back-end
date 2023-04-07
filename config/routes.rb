@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  mount Rswag::Ui::Engine => '/api-docs'
+  mount Rswag::Api::Engine => '/api-docs'
   devise_for :users,
              controllers: {
                  sessions: 'users/sessions',
@@ -10,9 +12,9 @@ Rails.application.routes.draw do
   # root "articles#index"
   namespace :api do
     namespace :v1 do
-      resources :courses do
-        resources :teachers 
-        resources :reservations
+      resources :courses, only: [:index, :show] do
+        resources :teachers, only: [:index, :show]
+        resources :reservations, only: [:index, :create, :destroy]
       end
     end
   end
