@@ -120,6 +120,60 @@ paths:
           description: course deleted successfully
         '404':
           description: course not found
+  "/api/v1/courses/{id}/reservations":
+    get:
+      summary: Get all reservations
+      tags:
+      - Reservation
+      responses:
+        '200':
+          description: reservation found
+  "/api/v1/courses/{id}/reservations/":
+    post:
+      summary: Creates Reservation
+      tags:
+      - Teacher
+      parameters: []
+      responses:
+        '201':
+          description: Reservation created successfully
+        '422':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: integer
+                start_time:
+                  type: time
+                end_time:
+                  type: time
+                course_id:
+                  type: integer
+                teacher_id:
+                  type: integer
+                user_id:
+                  type: integer
+              required:
+              - id
+              - start_time
+              - end_time
+              - course_id
+              - teacher_id
+              - user_id
+  "/api/v1/courses/{id}/reservations/{id}":
+    delete:
+      summary: Cancel reservation
+      tags:
+      - Reservation
+      responses:
+        '200':
+          description: reservation cancelled successfully
+        '404':
+          description: reservation not found
   "/api/v1/courses/{id}/teachers":
     get:
       summary: Get all teachers
