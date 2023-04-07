@@ -1,4 +1,5 @@
 class Teacher < ApplicationRecord
-  has_many :reservations
   belongs_to :course
+  has_many :reservations
+  has_many :users, through: :reservations
 end

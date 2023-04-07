@@ -42,13 +42,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_05_193538) do
   end
 
   create_table "reservations", force: :cascade do |t|
-    t.date "available_days", array: true
-    t.time "available_times", array: true
+    t.time "start_time"
+    t.time "end_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
     t.bigint "course_id"
+    t.bigint "teacher_id"
     t.index ["course_id"], name: "index_reservations_on_course_id"
+    t.index ["teacher_id"], name: "index_reservations_on_teacher_id"
     t.index ["user_id"], name: "index_reservations_on_user_id"
   end
 
@@ -58,8 +60,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_05_193538) do
     t.integer "years_of_experience"
     t.text "professional_summary"
     t.float "hourly_rating"
-    t.date "available_days", array: true
-    t.time "available_times", array: true
+    t.time "start_time"
+    t.time "end_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "course_id"
@@ -83,6 +85,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_05_193538) do
   add_foreign_key "enrollments", "courses"
   add_foreign_key "enrollments", "users"
   add_foreign_key "reservations", "courses"
+  add_foreign_key "reservations", "teachers"
   add_foreign_key "reservations", "users"
   add_foreign_key "teachers", "courses"
 end
