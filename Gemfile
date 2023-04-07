@@ -52,6 +52,8 @@ gem 'devise-jwt'
 gem 'rack-cors'
 gem 'rubocop', '>= 1.0', '< 2.0'
 
+gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
+
 group :development, :test do
   gem 'rspec-rails', '~> 6.0.0'
   gem 'shoulda-matchers', '~> 5.0'

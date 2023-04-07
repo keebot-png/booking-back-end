@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_04_065052) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_05_193538) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -20,11 +20,19 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_04_065052) do
     t.text "course_outline", array: true
     t.integer "enrolled_students"
     t.string "image"
-    t.boolean "available", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
     t.index ["user_id"], name: "index_courses_on_user_id"
+  end
+
+  create_table "enrollments", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "course_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["course_id"], name: "index_enrollments_on_course_id"
+    t.index ["user_id"], name: "index_enrollments_on_user_id"
   end
 
   create_table "jwt_denylist", force: :cascade do |t|
@@ -34,8 +42,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_04_065052) do
   end
 
   create_table "reservations", force: :cascade do |t|
-    t.date "starting_date"
-    t.date "ending_date"
+    t.date "available_days", array: true
+    t.time "available_times", array: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
@@ -51,6 +59,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_04_065052) do
     t.text "professional_summary"
     t.float "hourly_rating"
     t.date "available_days", array: true
+    t.time "available_times", array: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "course_id"
@@ -71,6 +80,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_04_065052) do
   end
 
   add_foreign_key "courses", "users"
+  add_foreign_key "enrollments", "courses"
+  add_foreign_key "enrollments", "users"
   add_foreign_key "reservations", "courses"
   add_foreign_key "reservations", "users"
   add_foreign_key "teachers", "courses"
