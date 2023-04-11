@@ -7,7 +7,6 @@ class CreateCourses < ActiveRecord::Migration[7.0]
       t.integer :enrolled_students
       t.string :image
       t.timestamps
-      t.references :user, foreign_key: true
     end
   end
 end
