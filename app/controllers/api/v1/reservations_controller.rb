@@ -24,6 +24,6 @@ class Api::V1::ReservationsController < ApplicationController
   private
 
   def reserve_params
-    params.require(:reservation).permit(:day, :time, :course_id, :teacher_id)
+    params.require(:reservation).permit(:day, :course_id, :teacher_id, times: [])
   end
 end
