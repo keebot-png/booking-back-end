@@ -8,6 +8,7 @@ class Api::V1::ReservationsController < ApplicationController
 
   def create
     @reservation = Reservation.create(reserve_params)
+    @reservation.user = current_user
     if @reservation.save!
       render json: { message: 'Created reservation successfully' }, status: :ok
     else
@@ -23,6 +24,6 @@ class Api::V1::ReservationsController < ApplicationController
   private
 
   def reserve_params
-    params.require(:reservation).permit(:day, :time, :user_id, :course_id, :teacher_id)
+    params.require(:reservation).permit(:day, :time, :course_id, :teacher_id)
   end
 end

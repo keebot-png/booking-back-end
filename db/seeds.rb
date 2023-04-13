@@ -7,11 +7,6 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 course_one = Course.create(title: 'HTML & CSS Crash Course', 
-description: 'HTML & CSS are the core building blocks of front-end web development and are used to structure website content and control the visual design of them too.', 
-course_outline: ['Introduction to HTML', 'HTML Basics', 'HTML forms', 'CSS Basics', 'Classes & Selectors', 'HTML 5 Semenatics' 'Chrome Dev tools', 'CSS Layouts & Positions', 'Pseudo Classes & Elements', 'Intro to Media Queries'], 
-image: 'https://cdn.fs.teachablecdn.com/6oadsMCBQ82r522pzJkz')
-
-course_one = Course.create(title: 'HTML & CSS Crash Course', 
 	description: 'HTML & CSS are the core building blocks of front-end web development and are used to structure website content and control the visual design of them too.', 
 	course_outline: ['Introduction to HTML', 'HTML Basics', 'HTML forms', 'CSS Basics', 'Classes & Selectors', 'HTML 5 Semenatics' 'Chrome Dev tools', 'CSS Layouts & Positions', 'Pseudo Classes & Elements', 'Intro to Media Queries'], 
 	image: 'https://cdn.fs.teachablecdn.com/6oadsMCBQ82r522pzJkz')
@@ -45,1536 +40,270 @@ course_six = Course.create(title: 'TypeScript Tutorial',
 
 teacher_one = Teacher.create(
 	name: "Shaddai", 
-	image: '"https://randomuser.me/api/portraits/men/4.jpg"', 
-	: 5, professional_summary: "I am a Teacher", 
+	image: "https://randomuser.me/api/portraits/women/11.jpg", 
+	years_of_experience: 5,
+ 	professional_summary: "I am a Teacher", 
 	hourly_rating: 25,  
-	available_times: [
-		{
-		'day' => 'monday',
-		'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]        
-		},
-		{
-			'day' => 'Wednesday',
-			'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]
-		}
-	], course_id: course_one.id
+	course_id: course_one.id
 )
 
 teacher_two = Teacher.create(
 	name: "keenan", 
 	image: "https://randomuser.me/api/portraits/women/3.jpg", 
-	: 5, professional_summary: "I am backend engineer", 
+	years_of_experience: 5,
+ 	professional_summary: "I am backend engineer", 
 	hourly_rating: 25,  
-	available_times: [
-		{
-		'day' => 'Tuesday',
-		'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]        
-		},
-		{
-			'day' => 'Wednesday',
-			'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]
-		}
-	], course_id: course_two.id
+	course_id: course_one.id
 )
 
 teacher_three = Teacher.create(
 	name: "Onomeh", 
 	image: "https://randomuser.me/api/portraits/men/8.jpg", 
-	: 5, professional_summary: "I am front-end engineer", 
+	years_of_experience: 5,
+ professional_summary: "I am front-end engineer", 
 	hourly_rating: 25,  
-	available_times: [
-		{
-		'day' => 'Thursday',
-		'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]        
-		},
-		{
-			'day' => 'Wednesday',
-			'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]
-		}
-	], course_id: course_three.id
+	course_id: course_one.id
 )
 
 teacher_four = Teacher.create(
 	name: "Anko", 
 	image: "https://randomuser.me/api/portraits/women/8.jpg", 
-	: 5, professional_summary: "I am backend engineer", 
+	years_of_experience: 5,
+ professional_summary: "I am backend engineer", 
 	hourly_rating: 25,  
-	available_times: [
-		{
-		'day' => 'Sunday',
-		'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]        
-		},
-		{
-			'day' => 'Wednesday',
-			'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]
-		}
-	], course_id: course_four.id
+	course_id: course_one.id
 )
 
 teacher_five = Teacher.create(
 	name: "Botes", 
 	image: "https://randomuser.me/api/portraits/men/12.jpg", 
-	: 5, professional_summary: "I am backend engineer", 
+	years_of_experience: 5,
+ 	professional_summary: "I am backend engineer", 
 	hourly_rating: 30,  
-	available_times: [
-		{
-		'day' => 'Tuesday',
-		'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]        
-		},
-		{
-			'day' => 'Wednesday',
-			'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]
-		}
-	], course_id: course_five.id
+	course_id: course_one.id
 )
 
 teacher_six = Teacher.create(
 	name: "kennedy", 
 	image: 'https://randomuser.me/api/portraits/men/12.jpg', 
-	: 5, professional_summary: "I am backend engineer", 
+	years_of_experience: 5,
+ 	professional_summary: "I am backend engineer", 
 	hourly_rating: 27,  
-	available_times: [
-		{
-		'day' => 'Tuesday',
-		'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]        
-		},
-		{
-			'day' => 'Monday',
-			'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]
-		}
-	], course_id: course_six.id
+	course_id: course_two.id
 )
 
 teacher_one = Teacher.create(
 	name: "Shaddai", 
-	image: '"https://randomuser.me/api/portraits/men/4.jpg"', 
-	: 5, professional_summary: "I am a Teacher", 
+	image: "https://randomuser.me/api/portraits/women/11.jpg", 
+	years_of_experience: 5,
+    professional_summary: "I am a Teacher", 
 	hourly_rating: 25,  
-	available_times: [
-		{
-		'day' => 'monday',
-		'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]        
-		},
-		{
-			'day' => 'Wednesday',
-			'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]
-		}
-	], course_id: course_two.id
+	course_id: course_two.id
 )
 
 teacher_two = Teacher.create(
 	name: "keenan", 
 	image: "https://randomuser.me/api/portraits/women/3.jpg", 
-	: 5, professional_summary: "I am backend engineer", 
+	years_of_experience: 5,
+	professional_summary: "I am backend engineer", 
 	hourly_rating: 25,  
-	available_times: [
-		{
-		'day' => 'Tuesday',
-		'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]        
-		},
-		{
-			'day' => 'Wednesday',
-			'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]
-		}
-	], course_id: course_two.id
+	course_id: course_two.id
 )
 
 teacher_three = Teacher.create(
 	name: "Onomeh", 
 	image: "https://randomuser.me/api/portraits/men/8.jpg", 
-	: 5, professional_summary: "I am front-end engineer", 
+	years_of_experience: 5,
+    professional_summary: "I am front-end engineer", 
 	hourly_rating: 25,  
-	available_times: [
-		{
-		'day' => 'Thursday',
-		'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]        
-		},
-		{
-			'day' => 'Wednesday',
-			'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]
-		}
-	], course_id: course_two.id
+	course_id: course_two.id
 )
 
 teacher_four = Teacher.create(
 	name: "Anko", 
 	image: "https://randomuser.me/api/portraits/women/8.jpg", 
-	: 5, professional_summary: "I am backend engineer", 
+	years_of_experience: 5,
+    professional_summary: "I am backend engineer", 
 	hourly_rating: 25,  
-	available_times: [
-		{
-		'day' => 'Sunday',
-		'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]        
-		},
-		{
-			'day' => 'Wednesday',
-			'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]
-		}
-	], course_id: course_two.id
+	course_id: course_two.id
 )
 
 teacher_five = Teacher.create(
 	name: "Botes", 
 	image: "https://randomuser.me/api/portraits/men/12.jpg", 
-	: 5, professional_summary: "I am backend engineer", 
+	years_of_experience: 5,
+    professional_summary: "I am backend engineer", 
 	hourly_rating: 30,  
-	available_times: [
-		{
-		'day' => 'Tuesday',
-		'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]        
-		},
-		{
-			'day' => 'Wednesday',
-			'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]
-		}
-	], course_id: course_two.id
+	course_id: course_three.id
 )
 
 teacher_six = Teacher.create(
 	name: "kennedy", 
 	image: 'https://randomuser.me/api/portraits/men/12.jpg', 
-	: 5, professional_summary: "I am backend engineer", 
+	years_of_experience: 5,
+    professional_summary: "I am backend engineer", 
 	hourly_rating: 27,  
-	available_times: [
-		{
-		'day' => 'Tuesday',
-		'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]        
-		},
-		{
-			'day' => 'Monday',
-			'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]
-		}
-	], course_id: course_two.id
+	course_id: course_three.id
 ) 
 
 teacher_one3 = Teacher.create(
 	name: "Shaddai", 
-	image: '"https://randomuser.me/api/portraits/men/4.jpg"', 
-	: 5, professional_summary: "I am a Teacher", 
+	image: "https://randomuser.me/api/portraits/women/11.jpg", 
+	years_of_experience: 5,
+    professional_summary: "I am a Teacher", 
 	hourly_rating: 25,  
-	available_times: [
-		{
-		'day' => 'monday',
-		'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]        
-		},
-		{
-			'day' => 'Wednesday',
-			'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]
-		}
-	], course_id: course_three.id
+	course_id: course_three.id
 )
 
 teacher_two3 = Teacher.create(
 	name: "keenan", 
 	image: "https://randomuser.me/api/portraits/women/3.jpg", 
-	: 5, professional_summary: "I am backend engineer", 
+	years_of_experience: 5,
+    professional_summary: "I am backend engineer", 
 	hourly_rating: 25,  
-	available_times: [
-		{
-		'day' => 'Tuesday',
-		'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]        
-		},
-		{
-			'day' => 'Wednesday',
-			'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]
-		}
-	], course_id: course_three.id
+	course_id: course_three.id
 )
 
 teacher_three3 = Teacher.create(
 	name: "Onomeh", 
 	image: "https://randomuser.me/api/portraits/men/8.jpg", 
-	: 5, professional_summary: "I am front-end engineer", 
+	years_of_experience: 5,
+ 	professional_summary: "I am front-end engineer", 
 	hourly_rating: 25,  
-	available_times: [
-		{
-		'day' => 'Thursday',
-		'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]        
-		},
-		{
-			'day' => 'Wednesday',
-			'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]
-		}
-	], course_id: course_three.id
+	course_id: course_three.id
 )
 
 teacher_four3 = Teacher.create(
 	name: "Anko", 
 	image: "https://randomuser.me/api/portraits/women/8.jpg", 
-	: 5, professional_summary: "I am backend engineer", 
+	years_of_experience: 5,
+    professional_summary: "I am backend engineer", 
 	hourly_rating: 25,  
-	available_times: [
-		{
-		'day' => 'Sunday',
-		'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]        
-		},
-		{
-			'day' => 'Wednesday',
-			'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]
-		}
-	], course_id: course_three.id
+	course_id: course_four.id
 )
 
 teacher_five3 = Teacher.create(
 	name: "Botes", 
 	image: "https://randomuser.me/api/portraits/men/12.jpg", 
-	: 5, professional_summary: "I am backend engineer", 
+	years_of_experience: 5,
+ 	professional_summary: "I am backend engineer", 
 	hourly_rating: 30,  
-	available_times: [
-		{
-		'day' => 'Tuesday',
-		'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]        
-		},
-		{
-			'day' => 'Wednesday',
-			'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]
-		}
-	], course_id: course_three.id
+	course_id: course_four.id
 )
 
 teacher_six3 = Teacher.create(
 	name: "kennedy", 
 	image: 'https://randomuser.me/api/portraits/men/12.jpg', 
-	: 5, professional_summary: "I am backend engineer", 
+	years_of_experience: 5,
+ 	professional_summary: "I am backend engineer", 
 	hourly_rating: 27,  
-	available_times: [
-		{
-		'day' => 'Tuesday',
-		'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]        
-		},
-		{
-			'day' => 'Monday',
-			'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]
-		}
-	], course_id: course_three.id
+	course_id: course_four.id
 )
 
 teacher_one4 = Teacher.create(
 	name: "Shaddai", 
-	image: '"https://randomuser.me/api/portraits/men/4.jpg"', 
-	: 5, professional_summary: "I am a Teacher", 
+	image: "https://randomuser.me/api/portraits/women/11.jpg", 
+	years_of_experience: 5,
+ 	professional_summary: "I am a Teacher", 
 	hourly_rating: 25,  
-	available_times: [
-		{
-		'day' => 'monday',
-		'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]        
-		},
-		{
-			'day' => 'Wednesday',
-			'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]
-		}
-	], course_id: course_four.id
+	course_id: course_four.id
 )
 
 teacher_two4 = Teacher.create(
 	name: "keenan", 
 	image: "https://randomuser.me/api/portraits/women/3.jpg", 
-	: 5, professional_summary: "I am backend engineer", 
+	years_of_experience: 5,
+ 	professional_summary: "I am backend engineer", 
 	hourly_rating: 25,  
-	available_times: [
-		{
-		'day' => 'Tuesday',
-		'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]        
-		},
-		{
-			'day' => 'Wednesday',
-			'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]
-		}
-	], course_id: course_four.id
+	course_id: course_four.id
 )
 
 teacher_three4 = Teacher.create(
 	name: "Onomeh", 
 	image: "https://randomuser.me/api/portraits/men/8.jpg", 
-	: 5, professional_summary: "I am front-end engineer", 
+	years_of_experience: 5,
+ 	professional_summary: "I am front-end engineer", 
 	hourly_rating: 25,  
-	available_times: [
-		{
-		'day' => 'Thursday',
-		'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]        
-		},
-		{
-			'day' => 'Wednesday',
-			'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]
-		}
-	], course_id: course_four.id
+	course_id: course_five.id
 )
 
 teacher_four4 = Teacher.create(
 	name: "Anko", 
 	image: "https://randomuser.me/api/portraits/women/8.jpg", 
-	: 5, professional_summary: "I am backend engineer", 
+	years_of_experience: 5,
+ 	professional_summary: "I am backend engineer", 
 	hourly_rating: 25,  
-	available_times: [
-		{
-		'day' => 'Sunday',
-		'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]        
-		},
-		{
-			'day' => 'Wednesday',
-			'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]
-		}
-	], course_id: course_four.id
+	course_id: course_five.id
 )
 
 teacher_five4 = Teacher.create(
 	name: "Botes", 
 	image: "https://randomuser.me/api/portraits/men/12.jpg", 
-	: 5, professional_summary: "I am backend engineer", 
+	years_of_experience: 5,
+ 	professional_summary: "I am backend engineer", 
 	hourly_rating: 30,  
-	available_times: [
-		{
-		'day' => 'Tuesday',
-		'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]        
-		},
-		{
-			'day' => 'Wednesday',
-			'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]
-		}
-	], course_id: course_four.id
+    course_id: course_five.id
 )
 
 teacher_six4 = Teacher.create(
 	name: "kennedy", 
 	image: 'https://randomuser.me/api/portraits/men/12.jpg', 
-	: 5, professional_summary: "I am backend engineer", 
+	years_of_experience: 5,
+ 	professional_summary: "I am backend engineer", 
 	hourly_rating: 27,  
-	available_times: [
-		{
-		'day' => 'Tuesday',
-		'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]        
-		},
-		{
-			'day' => 'Monday',
-			'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]
-		}
-	], course_id: course_four.id
+	course_id:course_five.id
 )
 
 
 teacher_one5 = Teacher.create(
 	name: "Shaddai", 
-	image: '"https://randomuser.me/api/portraits/men/4.jpg"', 
-	: 5, professional_summary: "I am a Teacher", 
+	image: "https://randomuser.me/api/portraits/women/11.jpg", 
+	years_of_experience: 5,
+ 	professional_summary: "I am a Teacher", 
 	hourly_rating: 25,  
-	available_times: [
-		{
-		'day' => 'monday',
-		'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]        
-		},
-		{
-			'day' => 'Wednesday',
-			'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]
-		}
-	], course_id: course_five.id
+	course_id: course_five.id
 )
 
 teacher_two5 = Teacher.create(
 	name: "keenan", 
 	image: "https://randomuser.me/api/portraits/women/3.jpg", 
-	: 5, professional_summary: "I am backend engineer", 
+	years_of_experience: 5,
+ professional_summary: "I am backend engineer", 
 	hourly_rating: 25,  
-	available_times: [
-		{
-		'day' => 'Tuesday',
-		'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]        
-		},
-		{
-			'day' => 'Wednesday',
-			'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]
-		}
-	], course_id: course_five.id
+    course_id: course_six.id
 )
 
 teacher_three5 = Teacher.create(
 	name: "Onomeh", 
 	image: "https://randomuser.me/api/portraits/men/8.jpg", 
-	: 5, professional_summary: "I am front-end engineer", 
+	years_of_experience: 5,
+ professional_summary: "I am front-end engineer", 
 	hourly_rating: 25,  
-	available_times: [
-		{
-		'day' => 'Thursday',
-		'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]        
-		},
-		{
-			'day' => 'Wednesday',
-			'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]
-		}
-	], course_id: course_five.id
+course_id: course_six.id
 )
 
 teacher_four5 = Teacher.create(
 	name: "Anko", 
 	image: "https://randomuser.me/api/portraits/women/8.jpg", 
-	: 5, professional_summary: "I am backend engineer", 
+	years_of_experience: 5,
+    professional_summary: "I am backend engineer", 
 	hourly_rating: 25,  
-	available_times: [
-		{
-		'day' => 'Sunday',
-		'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]        
-		},
-		{
-			'day' => 'Wednesday',
-			'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]
-		}
-	], course_id: course_five.id
+    course_id: course_six.id
 )
 
 teacher_five5 = Teacher.create(
 	name: "Botes", 
 	image: "https://randomuser.me/api/portraits/men/12.jpg", 
-	: 5, professional_summary: "I am backend engineer", 
+	years_of_experience: 5,
+    professional_summary: "I am backend engineer", 
 	hourly_rating: 30,  
-	available_times: [
-		{
-		'day' => 'Tuesday',
-		'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]        
-		},
-		{
-			'day' => 'Wednesday',
-			'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]
-		}
-	], course_id: course_five.id
+    course_id: course_six.id
 )
 
 teacher_six5 = Teacher.create(
 	name: "kennedy", 
 	image: 'https://randomuser.me/api/portraits/men/12.jpg', 
-	: 5, professional_summary: "I am backend engineer", 
+	years_of_experience: 5,
+    professional_summary: "I am backend engineer", 
 	hourly_rating: 27,  
-	available_times: [
-		{
-		'day' => 'Tuesday',
-		'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]        
-		},
-		{
-			'day' => 'Monday',
-			'available_time' => [
-			{
-				'timeslot' => '9:00am - 10:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '10:00am - 11:00am',
-				'available' => true
-			},
-			{
-				'timeslot' => '12:00pm - 13:00pm',
-				'available' => true
-			},
-			{
-				'timeslot' => '14:00pm - 15:00m',
-				'available' => true
-			},
-		]
-		}
-	], course_id: course_five.id
-
-
-
-
-
-     
+    course_id: course_six.id)

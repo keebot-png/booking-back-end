@@ -13,8 +13,9 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :courses, only: [:index, :show] do
-        resources :teachers, only: [:index, :show]
-        resources :reservations, only: [:index, :create, :destroy]
+        resources :teachers, only: [:index, :show] do
+          resources :reservations, only: [:index, :create, :destroy]
+        end
       end
     end
   end
