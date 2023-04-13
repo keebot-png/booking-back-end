@@ -17,13 +17,15 @@ class Api::V1::ReservationsController < ApplicationController
   end
 
   def destroy
-    Reservation.find_by(user_id: params[current_user.id]).destroy!
+    puts params
+    @reservation = Reservation.find(params[:id])
+    @reservation.destroy!
     render json: { message: 'Reservation deleted successfully' }, status: :ok
   end
 
   private
 
   def reserve_params
-    params.require(:reservation).permit(:day, :course_id, :teacher_id, times: [])
+    params.require(:reservation).permit(:course_name, :teacher_name, :day, :course_id, :teacher_id, times: [])
   end
 end

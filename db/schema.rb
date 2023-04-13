@@ -40,6 +40,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_05_193538) do
   end
 
   create_table "reservations", force: :cascade do |t|
+    t.string "course_name"
+    t.string "teacher_name"
     t.string "day"
     t.text "times", array: true
     t.datetime "created_at", null: false

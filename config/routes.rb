@@ -12,10 +12,9 @@ Rails.application.routes.draw do
   # root "articles#index"
   namespace :api do
     namespace :v1 do
+      resources :reservations, only: [:index, :create, :destroy]
       resources :courses, only: [:index, :show] do
-        resources :teachers, only: [:index, :show] do
-          resources :reservations, only: [:index, :create, :destroy]
-        end
+        resources :teachers, only: [:index, :show]
       end
     end
   end

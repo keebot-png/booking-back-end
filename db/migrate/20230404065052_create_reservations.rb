@@ -1,6 +1,8 @@
 class CreateReservations < ActiveRecord::Migration[7.0]
   def change
     create_table :reservations do |t|
+      t.string :course_name
+      t.string :teacher_name
       t.string :day
       t.text :times, array: true
       t.timestamps
