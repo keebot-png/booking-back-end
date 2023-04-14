@@ -46,9 +46,9 @@ course_six = Course.create(title: 'TypeScript Tutorial',
 teacher_one = Teacher.create(
 	name: "Shaddai", 
 	image: '"https://randomuser.me/api/portraits/men/4.jpg"', 
-	: 5, professional_summary: "I am a Teacher", 
+	professional_summary: "I am a Teacher", 
 	hourly_rating: 25,  
-	available_times: [
+	available_days: [
 		{
 		'day' => 'monday',
 		'available_time' => [
@@ -97,9 +97,9 @@ teacher_one = Teacher.create(
 teacher_two = Teacher.create(
 	name: "keenan", 
 	image: "https://randomuser.me/api/portraits/women/3.jpg", 
-	: 5, professional_summary: "I am backend engineer", 
+	professional_summary: "I am backend engineer", 
 	hourly_rating: 25,  
-	available_times: [
+	available_days: [
 		{
 		'day' => 'Tuesday',
 		'available_time' => [
@@ -148,9 +148,9 @@ teacher_two = Teacher.create(
 teacher_three = Teacher.create(
 	name: "Onomeh", 
 	image: "https://randomuser.me/api/portraits/men/8.jpg", 
-	: 5, professional_summary: "I am front-end engineer", 
+  professional_summary: "I am front-end engineer", 
 	hourly_rating: 25,  
-	available_times: [
+	available_days: [
 		{
 		'day' => 'Thursday',
 		'available_time' => [
@@ -199,9 +199,9 @@ teacher_three = Teacher.create(
 teacher_four = Teacher.create(
 	name: "Anko", 
 	image: "https://randomuser.me/api/portraits/women/8.jpg", 
-	: 5, professional_summary: "I am backend engineer", 
+  professional_summary: "I am backend engineer", 
 	hourly_rating: 25,  
-	available_times: [
+	available_days: [
 		{
 		'day' => 'Sunday',
 		'available_time' => [
@@ -250,9 +250,9 @@ teacher_four = Teacher.create(
 teacher_five = Teacher.create(
 	name: "Botes", 
 	image: "https://randomuser.me/api/portraits/men/12.jpg", 
-	: 5, professional_summary: "I am backend engineer", 
+  professional_summary: "I am backend engineer", 
 	hourly_rating: 30,  
-	available_times: [
+	available_days: [
 		{
 		'day' => 'Tuesday',
 		'available_time' => [
@@ -301,9 +301,9 @@ teacher_five = Teacher.create(
 teacher_six = Teacher.create(
 	name: "kennedy", 
 	image: 'https://randomuser.me/api/portraits/men/12.jpg', 
-	: 5, professional_summary: "I am backend engineer", 
+  professional_summary: "I am backend engineer", 
 	hourly_rating: 27,  
-	available_times: [
+	available_days: [
 		{
 		'day' => 'Tuesday',
 		'available_time' => [
@@ -352,9 +352,9 @@ teacher_six = Teacher.create(
 teacher_one = Teacher.create(
 	name: "Shaddai", 
 	image: '"https://randomuser.me/api/portraits/men/4.jpg"', 
-	: 5, professional_summary: "I am a Teacher", 
+  professional_summary: "I am a Teacher", 
 	hourly_rating: 25,  
-	available_times: [
+	available_days: [
 		{
 		'day' => 'monday',
 		'available_time' => [
@@ -403,9 +403,9 @@ teacher_one = Teacher.create(
 teacher_two = Teacher.create(
 	name: "keenan", 
 	image: "https://randomuser.me/api/portraits/women/3.jpg", 
-	: 5, professional_summary: "I am backend engineer", 
+  professional_summary: "I am backend engineer", 
 	hourly_rating: 25,  
-	available_times: [
+	available_days: [
 		{
 		'day' => 'Tuesday',
 		'available_time' => [
@@ -454,9 +454,9 @@ teacher_two = Teacher.create(
 teacher_three = Teacher.create(
 	name: "Onomeh", 
 	image: "https://randomuser.me/api/portraits/men/8.jpg", 
-	: 5, professional_summary: "I am front-end engineer", 
+  professional_summary: "I am front-end engineer", 
 	hourly_rating: 25,  
-	available_times: [
+	available_days: [
 		{
 		'day' => 'Thursday',
 		'available_time' => [
@@ -505,9 +505,9 @@ teacher_three = Teacher.create(
 teacher_four = Teacher.create(
 	name: "Anko", 
 	image: "https://randomuser.me/api/portraits/women/8.jpg", 
-	: 5, professional_summary: "I am backend engineer", 
+  professional_summary: "I am backend engineer", 
 	hourly_rating: 25,  
-	available_times: [
+	available_days: [
 		{
 		'day' => 'Sunday',
 		'available_time' => [
@@ -556,9 +556,9 @@ teacher_four = Teacher.create(
 teacher_five = Teacher.create(
 	name: "Botes", 
 	image: "https://randomuser.me/api/portraits/men/12.jpg", 
-	: 5, professional_summary: "I am backend engineer", 
+  professional_summary: "I am backend engineer", 
 	hourly_rating: 30,  
-	available_times: [
+	available_days: [
 		{
 		'day' => 'Tuesday',
 		'available_time' => [
@@ -607,9 +607,9 @@ teacher_five = Teacher.create(
 teacher_six = Teacher.create(
 	name: "kennedy", 
 	image: 'https://randomuser.me/api/portraits/men/12.jpg', 
-	: 5, professional_summary: "I am backend engineer", 
+  professional_summary: "I am backend engineer", 
 	hourly_rating: 27,  
-	available_times: [
+	available_days: [
 		{
 		'day' => 'Tuesday',
 		'available_time' => [
@@ -658,9 +658,9 @@ teacher_six = Teacher.create(
 teacher_one3 = Teacher.create(
 	name: "Shaddai", 
 	image: '"https://randomuser.me/api/portraits/men/4.jpg"', 
-	: 5, professional_summary: "I am a Teacher", 
+  professional_summary: "I am a Teacher", 
 	hourly_rating: 25,  
-	available_times: [
+	available_days: [
 		{
 		'day' => 'monday',
 		'available_time' => [
@@ -709,9 +709,9 @@ teacher_one3 = Teacher.create(
 teacher_two3 = Teacher.create(
 	name: "keenan", 
 	image: "https://randomuser.me/api/portraits/women/3.jpg", 
-	: 5, professional_summary: "I am backend engineer", 
+  professional_summary: "I am backend engineer", 
 	hourly_rating: 25,  
-	available_times: [
+	available_days: [
 		{
 		'day' => 'Tuesday',
 		'available_time' => [
@@ -760,9 +760,9 @@ teacher_two3 = Teacher.create(
 teacher_three3 = Teacher.create(
 	name: "Onomeh", 
 	image: "https://randomuser.me/api/portraits/men/8.jpg", 
-	: 5, professional_summary: "I am front-end engineer", 
+  professional_summary: "I am front-end engineer", 
 	hourly_rating: 25,  
-	available_times: [
+	available_days: [
 		{
 		'day' => 'Thursday',
 		'available_time' => [
@@ -811,9 +811,9 @@ teacher_three3 = Teacher.create(
 teacher_four3 = Teacher.create(
 	name: "Anko", 
 	image: "https://randomuser.me/api/portraits/women/8.jpg", 
-	: 5, professional_summary: "I am backend engineer", 
+  professional_summary: "I am backend engineer", 
 	hourly_rating: 25,  
-	available_times: [
+	available_days: [
 		{
 		'day' => 'Sunday',
 		'available_time' => [
@@ -862,9 +862,9 @@ teacher_four3 = Teacher.create(
 teacher_five3 = Teacher.create(
 	name: "Botes", 
 	image: "https://randomuser.me/api/portraits/men/12.jpg", 
-	: 5, professional_summary: "I am backend engineer", 
+  professional_summary: "I am backend engineer", 
 	hourly_rating: 30,  
-	available_times: [
+	available_days: [
 		{
 		'day' => 'Tuesday',
 		'available_time' => [
@@ -913,9 +913,9 @@ teacher_five3 = Teacher.create(
 teacher_six3 = Teacher.create(
 	name: "kennedy", 
 	image: 'https://randomuser.me/api/portraits/men/12.jpg', 
-	: 5, professional_summary: "I am backend engineer", 
+  professional_summary: "I am backend engineer", 
 	hourly_rating: 27,  
-	available_times: [
+	available_days: [
 		{
 		'day' => 'Tuesday',
 		'available_time' => [
@@ -964,9 +964,9 @@ teacher_six3 = Teacher.create(
 teacher_one4 = Teacher.create(
 	name: "Shaddai", 
 	image: '"https://randomuser.me/api/portraits/men/4.jpg"', 
-	: 5, professional_summary: "I am a Teacher", 
+  professional_summary: "I am a Teacher", 
 	hourly_rating: 25,  
-	available_times: [
+	available_days: [
 		{
 		'day' => 'monday',
 		'available_time' => [
@@ -1015,9 +1015,9 @@ teacher_one4 = Teacher.create(
 teacher_two4 = Teacher.create(
 	name: "keenan", 
 	image: "https://randomuser.me/api/portraits/women/3.jpg", 
-	: 5, professional_summary: "I am backend engineer", 
+  professional_summary: "I am backend engineer", 
 	hourly_rating: 25,  
-	available_times: [
+	available_days: [
 		{
 		'day' => 'Tuesday',
 		'available_time' => [
@@ -1066,9 +1066,9 @@ teacher_two4 = Teacher.create(
 teacher_three4 = Teacher.create(
 	name: "Onomeh", 
 	image: "https://randomuser.me/api/portraits/men/8.jpg", 
-	: 5, professional_summary: "I am front-end engineer", 
+  professional_summary: "I am front-end engineer", 
 	hourly_rating: 25,  
-	available_times: [
+	available_days: [
 		{
 		'day' => 'Thursday',
 		'available_time' => [
@@ -1117,9 +1117,9 @@ teacher_three4 = Teacher.create(
 teacher_four4 = Teacher.create(
 	name: "Anko", 
 	image: "https://randomuser.me/api/portraits/women/8.jpg", 
-	: 5, professional_summary: "I am backend engineer", 
+  professional_summary: "I am backend engineer", 
 	hourly_rating: 25,  
-	available_times: [
+	available_days: [
 		{
 		'day' => 'Sunday',
 		'available_time' => [
@@ -1168,9 +1168,9 @@ teacher_four4 = Teacher.create(
 teacher_five4 = Teacher.create(
 	name: "Botes", 
 	image: "https://randomuser.me/api/portraits/men/12.jpg", 
-	: 5, professional_summary: "I am backend engineer", 
+  professional_summary: "I am backend engineer", 
 	hourly_rating: 30,  
-	available_times: [
+	available_days: [
 		{
 		'day' => 'Tuesday',
 		'available_time' => [
@@ -1219,9 +1219,9 @@ teacher_five4 = Teacher.create(
 teacher_six4 = Teacher.create(
 	name: "kennedy", 
 	image: 'https://randomuser.me/api/portraits/men/12.jpg', 
-	: 5, professional_summary: "I am backend engineer", 
+  professional_summary: "I am backend engineer", 
 	hourly_rating: 27,  
-	available_times: [
+	available_days: [
 		{
 		'day' => 'Tuesday',
 		'available_time' => [
@@ -1271,9 +1271,9 @@ teacher_six4 = Teacher.create(
 teacher_one5 = Teacher.create(
 	name: "Shaddai", 
 	image: '"https://randomuser.me/api/portraits/men/4.jpg"', 
-	: 5, professional_summary: "I am a Teacher", 
+  professional_summary: "I am a Teacher", 
 	hourly_rating: 25,  
-	available_times: [
+	available_days: [
 		{
 		'day' => 'monday',
 		'available_time' => [
@@ -1322,9 +1322,9 @@ teacher_one5 = Teacher.create(
 teacher_two5 = Teacher.create(
 	name: "keenan", 
 	image: "https://randomuser.me/api/portraits/women/3.jpg", 
-	: 5, professional_summary: "I am backend engineer", 
+  professional_summary: "I am backend engineer", 
 	hourly_rating: 25,  
-	available_times: [
+	available_days: [
 		{
 		'day' => 'Tuesday',
 		'available_time' => [
@@ -1373,9 +1373,9 @@ teacher_two5 = Teacher.create(
 teacher_three5 = Teacher.create(
 	name: "Onomeh", 
 	image: "https://randomuser.me/api/portraits/men/8.jpg", 
-	: 5, professional_summary: "I am front-end engineer", 
+  professional_summary: "I am front-end engineer", 
 	hourly_rating: 25,  
-	available_times: [
+	available_days: [
 		{
 		'day' => 'Thursday',
 		'available_time' => [
@@ -1424,9 +1424,9 @@ teacher_three5 = Teacher.create(
 teacher_four5 = Teacher.create(
 	name: "Anko", 
 	image: "https://randomuser.me/api/portraits/women/8.jpg", 
-	: 5, professional_summary: "I am backend engineer", 
+  professional_summary: "I am backend engineer", 
 	hourly_rating: 25,  
-	available_times: [
+	available_days: [
 		{
 		'day' => 'Sunday',
 		'available_time' => [
@@ -1475,9 +1475,9 @@ teacher_four5 = Teacher.create(
 teacher_five5 = Teacher.create(
 	name: "Botes", 
 	image: "https://randomuser.me/api/portraits/men/12.jpg", 
-	: 5, professional_summary: "I am backend engineer", 
+  professional_summary: "I am backend engineer", 
 	hourly_rating: 30,  
-	available_times: [
+	available_days: [
 		{
 		'day' => 'Tuesday',
 		'available_time' => [
@@ -1526,9 +1526,9 @@ teacher_five5 = Teacher.create(
 teacher_six5 = Teacher.create(
 	name: "kennedy", 
 	image: 'https://randomuser.me/api/portraits/men/12.jpg', 
-	: 5, professional_summary: "I am backend engineer", 
+  professional_summary: "I am backend engineer", 
 	hourly_rating: 27,  
-	available_times: [
+	available_days: [
 		{
 		'day' => 'Tuesday',
 		'available_time' => [
@@ -1571,10 +1571,4 @@ teacher_six5 = Teacher.create(
 			},
 		]
 		}
-	], course_id: course_five.id
-
-
-
-
-
-     
+	], course_id: course_five.id)   
