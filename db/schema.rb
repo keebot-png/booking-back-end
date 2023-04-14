@@ -43,8 +43,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_05_193538) do
   end
 
   create_table "reservations", force: :cascade do |t|
-    t.date "starting_date"
-    t.date "ending_date"
+    t.string "course_name"
+    t.string "teacher_name"
+    t.string "day"
+    t.text "times", array: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
@@ -59,7 +61,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_05_193538) do
     t.integer "years_of_experience"
     t.text "professional_summary"
     t.float "hourly_rating"
-    t.date "available_days", array: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "course_id"
