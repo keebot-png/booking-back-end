@@ -1,0 +1,236 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/api/v1/courses":
+    get:
+      summary: Retrieves all courses
+      tags:
+      - Courses
+      responses:
+        '200':
+          description: courses found
+          content:
+            application/json:
+              schema:
+                type: array
+                properties:
+                  id:
+                    type: integer
+                  title:
+                    type: string
+                  description:
+                    type: string
+                  course_outline:
+                    type: string
+                  image:
+                    type: string
+                  user_id:
+                    type: integer
+                  enrolled_students:
+                    type: integer
+                required:
+                - id
+                - title
+                - description
+                - course_outline
+                - image
+                - user_id
+                - enrolled_students
+  "/api/v1/courses/{id}":
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: integer
+    get:
+      summary: Retrieves a course
+      tags:
+      - Course
+      responses:
+        '200':
+          description: course found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  title:
+                    type: string
+                  description:
+                    type: string
+                  course_outline:
+                    type: string
+                  image:
+                    type: string
+                  user_id:
+                    type: integer
+                  enrolled_students:
+                    type: integer
+                required:
+                - id
+                - title
+                - description
+                - course_outline
+                - image
+                - user_id
+                - enrolled_students
+        '404':
+          description: course not found
+  "/api/v1/courses/{id}/reservations":
+    get:
+      summary: Get all reservations
+      tags:
+      - Reservation
+      responses:
+        '200':
+          description: reservation found
+  "/api/v1/courses/{id}/reservations/":
+    post:
+      summary: Creates Reservation
+      tags:
+      - Teacher
+      parameters: []
+      responses:
+        '201':
+          description: Reservation created successfully
+        '422':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: integer
+                course_name:
+                  type: string
+                teacher_name:
+                  type: string
+                day:
+                  type: string
+                times:
+                  type: text
+                course_id:
+                  type: integer
+                user_id:
+                  type: integer
+              required:
+              - id
+              - course_name
+              - teacher_name
+              - day
+              - times
+              - course_id
+              - user_id
+  "/api/v1/courses/{id}/reservations/{id}":
+    delete:
+      summary: Cancel reservation
+      tags:
+      - Reservation
+      responses:
+        '200':
+          description: reservation cancelled successfully
+        '404':
+          description: reservation not found
+  "/api/v1/courses/{id}/teachers":
+    get:
+      summary: Get all teachers
+      tags:
+      - Teachers
+      responses:
+        '200':
+          description: courses found
+  "/api/v1/courses/{id}/teachers/":
+    post:
+      summary: Creates a teacher
+      tags:
+      - Teacher
+      parameters: []
+      responses:
+        '201':
+          description: Teacher created successfully
+        '422':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: integer
+                name:
+                  type: string
+                image:
+                  type: string
+                years_of_experience:
+                  type: integer
+                professional_summary:
+                  type: string
+                hourly_rating:
+                  type: float
+                course_id:
+                  type: integer
+              required:
+              - id
+              - name
+              - image
+              - years_of_experience
+              - professional_summary
+              - hourly_rating
+              - course_id
+  "/api/v1/courses/{id}/teachers/{id}":
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: integer
+    get:
+      summary: Retrieves a teacher
+      tags:
+      - Teacher
+      responses:
+        '200':
+          description: teacher found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  name:
+                    type: string
+                  image:
+                    type: string
+                  years_of_experience:
+                    type: integer
+                  professional_summary:
+                    type: string
+                  hourly_rating:
+                    type: float
+                  course_id:
+                    type: integer
+                required:
+                - id
+                - name
+                - image
+                - years_of_experience
+                - professional_summary
+                - hourly_rating
+                - course_id
+        '404':
+          description: teacher not found
+servers:
+- url: https://{defaultHost}
+  variables:
+    defaultHost:
+      default: http://localhost:3000/

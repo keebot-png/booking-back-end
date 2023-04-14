@@ -1,39 +1,5 @@
 <a name="readme-top"></a>
 
-<!--
-HOW TO USE:
-This is an example of how you may give instructions on setting up your project locally.
-
-Modify this file to match your project and remove sections that don't apply.
-
-REQUIRED SECTIONS:
-- Table of Contents
-- About the Project
-  - Built With
-  - Live Demo
-- Getting Started
-- Authors
-- Future Features
-- Contributing
-- Show your support
-- Acknowledgements
-- License
-
-OPTIONAL SECTIONS:
-- FAQ
-
-After you're finished please remove all the comments and instructions!
--->
-
-<div align="center">
-  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
-
-  <h3><b>Microverse README Template</b></h3>
-
-</div>
-
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
@@ -42,7 +8,13 @@ After you're finished please remove all the comments and instructions!
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+    - [Website Mockup 📱 💻 🖥️](#screenshots)
+    - [🖺 Entity Relationship Diagram](#er-diagram)
+  - [<img src="https://cdn-icons-png.flaticon.com/512/5360/5360804.png" width="23" height="20"/> Kanban Board](#kanban-board)
+  - [<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/539px-React-icon.svg.png" width="23" height="20"/> React Frontend](#react-frontend)
+  - [<img src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/spiral-notepad_1f5d2-fe0f.png" width="23" height="20"/> API Documentation](#api-docs)
   - [🚀 Live Demo](#live-demo)
+  
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -55,22 +27,20 @@ After you're finished please remove all the comments and instructions!
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ (OPTIONAL)](#faq)
+- [❓ FAQ](#faq)
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 EducateMe Backend <a name="about-project"></a>
+- Homepage
+<img src="./react-pic.png" />
 
-> Describe your project in 1 or 2 sentences.
-
-**[your_project__name]** is a...
+**EducateMe** is a course booking platform that allows a user to reserve a course taken by a specific teacher of their liking. It is built and connected by using two different repos: Back-end(Rails) and Front-end(React/Redux).
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
-
-> Describe the tech stack and include only the relevant sections that apply to your project.
 
 <details>
   <summary>Client</summary>
@@ -82,7 +52,7 @@ After you're finished please remove all the comments and instructions!
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
+    <li>Rails</li>
   </ul>
 </details>
 
@@ -97,125 +67,123 @@ After you're finished please remove all the comments and instructions!
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- **Course List endpoints**
+- **Authentication to access Courses, Teacher and Reservations**
+- **Authenticated Users can add/remove a reservations**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LIVE DEMO -->
+<!-- ER DIAGRAM-->
+## :card_index: Entity Relationship Diagram <a name="er-diagram"></a>
+<img src="./image.png" />
+
+<!-- React Frontend -->
+## <img src="./react-pic.png" width="23" height="20"/> React Frontend <a name="react-frontend"></a>
+- Here is the Frontend part of the project [Front End](https://github.com/keebot-png/booking-front-end)
+
+## 🚀 kanban board <a name="board"></a>
+
+## List of requirements:
+- [x] There are four team members in total.
+- [x] Kanban board [LINK](https://github.com/users/keebot-png/projects/3/views/1).
+## Screenshot of the kanban board:
+<img src='https://user-images.githubusercontent.com/101398701/228822583-e23a3acd-3c86-4a44-960e-d512e53cb2e6.png' /> 
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
-
-- [Live Demo Link](https://google.com)
+- [Live Demo] :smiley:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
-
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
-
 To get a local copy up and running, follow these steps.
-
 ### Prerequisites
 
-In order to run this project you need:
-
-<!--
-Example command:
-
-```sh
+To run this project you need:
+`Git` and `Ruby`
+```
  gem install rails
 ```
- -->
-
-### Setup
-
-Clone this repository to your desired folder:
-
-<!--
-Example commands:
-
-```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
-```
---->
 
 ### Install
 
 Install this project with:
-
-<!--
-Example command:
-
+(Check the your ruby version first and if it is different then you can add your version to the gemfile)
 ```sh
-  cd my-project
-  gem install
+  bundle install
 ```
---->
+- To run the rails server, strictly follow the instructions layed out the screenshot:
+- NB: If you have a config/credentials.yml.enc delete it, as it will install another key for you when following the instructions below.
 
+<img src="./instructions.PNG" />
+
+For more context, you can go to this [link](https://github.com/yahyaelganyni1/devise-jwt-app1).
+
+Change the username and password within the config.database.yml to your own username and password as specified below.
+```
+username = {YOUR DATABASE USERNAME || postgres}
+password = {YOUR DATABASE PASSWORD}
+```
+Create a Database (Mandatory)
+
+```
+rails db:create
+```
+If you have made a migration then run this command
+
+```
+rails db:migrate
+```
+Run the seed folder.
+```
+rails db:seed
+```
 ### Usage
 
-To run the project, execute the following command:
-
-<!--
-Example command:
+To run the project on the backend, execute the following command:
 
 ```sh
-  rails server
+   rails s  # to run the server on default port 3000
+   # to be able to access the database
 ```
---->
-
-### Run tests
-
-To run tests, run the following command:
-
-<!--
-Example command:
+To run the project on the frontend, execute the following command:
 
 ```sh
-  bin/rails test test/models/article_test.rb
+   npm run dev  # to run the server on default port 3000
+   # to be able to access the database
 ```
---->
-
-### Deployment
-
-You can deploy this project using:
-
-<!--
-Example:
-
-```sh
-
-```
- -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
 
-## 👥 Authors <a name="authors"></a>
+## 👥 Authors (4 Micronauts) <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
+👤 **Keenan Botes**
 
-👤 **Author1**
+- GitHub: [@keebot-png](https://github.com/keebot-png)
+- Twitter: [@KeenanBotes](https://twitter.com/KeenanBotes)
+- LinkedIn: [kee.bot@icloud.com](https://www.linkedin.com/in/keenan-botes-947043160)
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+👤 **Linus shaddai**
 
-👤 **Author2**
+- GitHub: [@linushaddai99](https://github.com/linushaddai99)
+- LinkedIn: [@linusshaddai](https://www.linkedin.com/in/linusshaddai/)
+-Twitter: [@ShaddaiLinus](https://twitter.com/ShaddaiLinus)
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+👤 **Kennedy Omondi**
+
+- GitHub: [@kennankole](https://github.com/kennankole)
+- Twitter: [@obwombe_kennedy](https://twitter.com/obwombe_kennedy)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/kennedyomondi/)
+
+👤 **onwuanibe Onomeh** 
+
+- GitHub: [@githubhandle](https://github.com/Estherstarr/)
+- Twitter: [@twitterhandle](https://twitter.com/AnibeEsther)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/onwuanibeonome)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -223,11 +191,8 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
-
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [ ] **Admin Roles and access to the latest courses**
+- [ ] **Keep count of enrolled students to indicate popularity of the course**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -245,9 +210,7 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
-
-If you like this project...
+Give a ⭐️ if you like this project!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -255,34 +218,30 @@ If you like this project...
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
+I would like to thank:
+- [Microverse](https://www.microverse.org/)
+- Code Reviewers
 
-I would like to thank...
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FAQ (optional) -->
 
-## ❓ FAQ (OPTIONAL) <a name="faq"></a>
+## ❓ FAQ <a name="faq"></a>
 
-> Add at least 2 questions new developers would ask when they decide to use your project.
+- **How I can install rails?**
 
-- **[Question_1]**
+  - You can follow the [official guide](https://guides.rubyonrails.org/getting_started.html#installing-rails) to install rails. If you have gem installed, you can run `gem install rails` to install rails.
 
-  - [Answer_1]
-
-- **[Question_2]**
-
-  - [Answer_2]
-
+- **How I can run tests?**
+  
+    - After cloning the repository, run `bundle` and then run `rspec` to run the tests. 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+This project is [MIT](./license) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
