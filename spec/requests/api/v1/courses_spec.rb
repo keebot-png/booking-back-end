@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe 'Api::V1::Courses', type: :request do
-  describe 'GET /index' do
-    pending "add some examples (or delete) #{__FILE__}"
-  end
+RSpec.describe Course, type: :model do
+  it { should have_many(:users).through(:enrollments) }
+  it { should have_many(:teachers) }
+  it { should have_many(:enrollments) }
 end

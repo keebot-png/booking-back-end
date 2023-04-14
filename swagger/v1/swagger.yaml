@@ -109,22 +109,25 @@ paths:
               properties:
                 id:
                   type: integer
-                start_time:
-                  type: time
-                end_time:
-                  type: time
+                course_name:
+                  type: string
+                teacher_name:
+                  type: string
+                day:
+                  type: string
+                times:
+                  type: text
                 course_id:
-                  type: integer
-                teacher_id:
                   type: integer
                 user_id:
                   type: integer
               required:
               - id
-              - start_time
-              - end_time
+              - course_name
+              - teacher_name
+              - day
+              - times
               - course_id
-              - teacher_id
               - user_id
   "/api/v1/courses/{id}/reservations/{id}":
     delete:
@@ -173,10 +176,6 @@ paths:
                   type: string
                 hourly_rating:
                   type: float
-                start_time:
-                  type: time
-                end_time:
-                  type: time
                 course_id:
                   type: integer
               required:
@@ -186,8 +185,6 @@ paths:
               - years_of_experience
               - professional_summary
               - hourly_rating
-              - start_time
-              - end_time
               - course_id
   "/api/v1/courses/{id}/teachers/{id}":
     parameters:
@@ -220,10 +217,6 @@ paths:
                     type: string
                   hourly_rating:
                     type: float
-                  start_time:
-                    type: time
-                  end_time:
-                    type: time
                   course_id:
                     type: integer
                 required:
@@ -233,8 +226,6 @@ paths:
                 - years_of_experience
                 - professional_summary
                 - hourly_rating
-                - start_time
-                - end_time
                 - course_id
         '404':
           description: teacher not found

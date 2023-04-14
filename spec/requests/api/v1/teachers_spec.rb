@@ -1,7 +1,5 @@
 require 'rails_helper'
 
-RSpec.describe 'Api::V1::Teachers', type: :request do
-  describe 'GET /index' do
-    pending "add some examples (or delete) #{__FILE__}"
-  end
+RSpec.describe Teacher, type: :model do
+  it { should belong_to(:course) }
 end

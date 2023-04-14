@@ -156,8 +156,8 @@ To run the project on the frontend, execute the following command:
 
 Run tests
 ```
-rspec spec/models
-rspec spec/routes
+rspec spec/requests/api/v1/
+rake rswag:specs:swaggerize
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

@@ -15,12 +15,9 @@ RSpec.describe 'api/teachers' do
                  years_of_experience: { type: :integer },
                  professional_summary: { type: :string },
                  hourly_rating: { type: :float },
-                 start_time: { type: :time },
-                 end_time: { type: :time },
                  course_id: { type: :integer }
                },
-               required: %w[id name image years_of_experience professional_summary hourly_rating start_time end_time
-                            course_id]
+               required: %w[id name image years_of_experience professional_summary hourly_rating course_id]
         run_test!
       end
     end
@@ -39,11 +36,9 @@ RSpec.describe 'api/teachers' do
           years_of_experience: { type: :integer },
           professional_summary: { type: :string },
           hourly_rating: { type: :float },
-          start_time: { type: :time },
-          end_time: { type: :time },
           course_id: { type: :integer }
         },
-        required: %w[id name image years_of_experience professional_summary hourly_rating start_time end_time course_id]
+        required: %w[id name image years_of_experience professional_summary hourly_rating course_id]
       }
       response '201', 'Teacher created successfully' do
         let(:teacher) do
@@ -51,8 +46,6 @@ RSpec.describe 'api/teachers' do
             name: 'Amos', image: 'http/img.png',
             years_of_experience: 10, professional_summary: 'PHD in maths',
             hourly_rating: 50.50,
-            start_time: Time.new(Time.now.year, Time.now.month, Time.now.day, 9, 0, 0, Time.now.utc_offset),
-            end_time: Time.new(Time.now.year, Time.now.month, Time.now.day, 10, 0, 0, Time.now.utc_offset),
             course_id: 1
           }
         end
@@ -80,20 +73,15 @@ RSpec.describe 'api/teachers' do
                  years_of_experience: { type: :integer },
                  professional_summary: { type: :string },
                  hourly_rating: { type: :float },
-                 start_time: { type: :time },
-                 end_time: { type: :time },
                  course_id: { type: :integer }
                },
-               required: %w[id name image years_of_experience professional_summary hourly_rating start_time
-                            end_time course_id]
+               required: %w[id name image years_of_experience professional_summary hourly_rating course_id]
         let(:id) do
           Teacher.create(
             name: 'Amos', image: 'http://school.com/math.jpg',
             years_of_experience: 10,
             professional_summary: 'A PHD in maths',
             hourly_rating: 50.30,
-            start_time: Time.new(Time.now.year, Time.now.month, Time.now.day, 9, 0, 0, Time.now.utc_offset),
-            end_time: Time.new(Time.now.year, Time.now.month, Time.now.day, 10, 0, 0, Time.now.utc_offset),
             course_id: 1
           ).id
         end
