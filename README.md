@@ -110,11 +110,12 @@ To run this project you need:
 ### Install
 
 Install this project with:
-
+(Check the your ruby version first and if it is different then you can add your version to the gemfile)
 ```sh
   bundle install
 ```
 - To run the rails server, strictly follow the instructions layed out the screenshot:
+- NB: If you have a config/credentials.yml.enc delete it, as it will install another key for you when following the instructions below.
 
 <img src="./instructions.PNG" />
 
@@ -152,12 +153,6 @@ To run the project on the frontend, execute the following command:
 ```sh
    npm run dev  # to run the server on default port 3000
    # to be able to access the database
-```
-
-Run tests
-```
-rspec spec/requests/api/v1/
-rake rswag:specs:swaggerize
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
